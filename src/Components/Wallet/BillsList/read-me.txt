@@ -1,0 +1,4 @@
+make list and list item same for (bills and transactions)
+
+create variable that will manage which list (in case of dummy data) or link (in case data is fetched from an api)
+will play the role of displaying the data

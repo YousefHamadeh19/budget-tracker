@@ -1,0 +1,36 @@
+.transaction-item{
+    position: relative;
+    display: flex;
+}
+
+.transaction-item img{
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+    margin: 0% 2.7%;
+
+}
+
+.transaction-item-description{
+    display: block;
+}
+.transaction-item-description .title{
+    font-weight: bold;
+    margin: 14% 0%;
+    color: #212121
+}
+.transaction-item-description .description{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1%;
+    color: #939393;
+
+}
+
+.transaction-item .transaction-amount{
+    position: absolute;
+    right: 0;
+    top: 34%;
+    color:#37AF76;
+    margin-right: 5%;
+}

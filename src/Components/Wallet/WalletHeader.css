@@ -1,0 +1,14 @@
+.header-container {
+  height: 100px;
+  align-items: center;
+  text-align: center;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  padding: 5% 0%;
+  background-color: white;
+}
+
+.header-container p {
+  color: #babcc2;
+  font-weight: bold;
+}

@@ -1,0 +1,26 @@
+.css-1uokg2p-MuiToggleButtonGroup-root {
+  margin: 0 8% !important;
+  margin-bottom: 34px;
+}
+.selected {
+  background-color: white !important;
+}
+.not-selected {
+  background-color: transparent !important;
+}
+.MuiToggleButtonGroup-grouped:not(:first-of-type),
+.MuiToggleButtonGroup-grouped:not(:last-of-type) {
+  border-radius: 14px !important;
+}
+.css-1uokg2p-MuiToggleButtonGroup-root
+  .MuiToggleButtonGroup-grouped:not(:first-of-type):hover,
+.css-1uokg2p-MuiToggleButtonGroup-root
+  .MuiToggleButtonGroup-grouped:not(:last-of-type):hover {
+  background-color: "none" !important;
+}
+
+.icons-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
