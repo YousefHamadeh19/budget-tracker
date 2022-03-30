@@ -1,7 +1,8 @@
 import "./TransactionItem.css";
 
 const TransactionItem = (props) => {
-  const obj = props.items;
+  const obj = props.info;
+
   return (
     <div className="transaction-item">
       <img src={`${obj.image}`} />

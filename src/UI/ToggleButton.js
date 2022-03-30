@@ -25,24 +25,17 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ColorToggleButton() {
+export default function ColorToggleButton(props) {
   const classes = useStyles();
   const [TransactionSelected, setTransactionSelected] = useState(true);
   const [BillsSelected, setBillsSelected] = useState(false);
 
-  console.log(
-    `Rendered transaction ${TransactionSelected} bills ${BillsSelected}`
-  );
-
   const toggleBillsBackground = (e) => {
-    console.log(
-      `In toggle bills transaction ${TransactionSelected} bills ${BillsSelected}`
-    );
     if (TransactionSelected === true && BillsSelected === false) {
       setTransactionSelected(false);
       setBillsSelected(true);
     }
-    return e.currentTarget.value;
+    props.handelToggle(e.currentTarget.value);
   };
 
   const toggleTransactionBackground = (e) => {
@@ -50,11 +43,7 @@ export default function ColorToggleButton() {
       setTransactionSelected(true);
       setBillsSelected(false);
     }
-    console.log(
-      `In toggle transaction transaction ${TransactionSelected} bills ${BillsSelected}`
-    );
-
-    return e.currentTarget.value;
+    props.handelToggle(e.currentTarget.value);
   };
 
   return (

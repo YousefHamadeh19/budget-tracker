@@ -1,10 +1,11 @@
 import "./Wallet.css";
-import image from "./Images/Upwork-for-Freelancers.png";
+import image from "./TransactionList/Images/Upwork-for-Freelancers.png";
 import WalletHeader from "./WalletHeader";
 import Icons from "../../UI/Icons";
 import ToggleButton from "../../UI/ToggleButton";
 import TransactionList from "./TransactionList/TransactionList";
 import { useState } from "react";
+
 const dummy_transactions = [
   {
     title: "Upwork",
@@ -37,10 +38,51 @@ const dummy_transactions = [
     amount: 0,
   },
 ];
+
+const dummy_bills = [
+  {
+    title: "Upwork-bills",
+    image: image,
+    date: "12",
+    amount: 0,
+  },
+  {
+    title: "Upwork-bills",
+    image: image,
+    date: "12",
+    amount: 0,
+  },
+  {
+    title: "Upwork-bills",
+    image: image,
+    date: "12",
+    amount: 0,
+  },
+  {
+    title: "Upwork-bills",
+    image: image,
+    date: "12",
+    amount: 0,
+  },
+  {
+    title: "Upwork-bills",
+    image: image,
+    date: "12",
+    amount: 0,
+  },
+];
+
 const Wallet = (props) => {
   const [list, setList] = useState(dummy_transactions);
-  const handelToggleButton = (e) => {
-    
+  const [listType, setListType] = useState("");
+  const handelToggleButton = (name) => {
+    if (name === "Upcoming Bills") {
+      setList(dummy_bills);
+      setListType("Upcoming Bills");
+    } else {
+      setList(dummy_transactions);
+      setListType("Transactions");
+    }
   };
   return (
     <div className={`wallet ${props.className}`}>
@@ -51,7 +93,7 @@ const Wallet = (props) => {
           sx={{ borderRadius: "50%" }}
           handelToggle={handelToggleButton}
         />
-        <TransactionList items={list} />
+        <TransactionList type={listType} items={list} />
       </div>
     </div>
   );
